@@ -1,0 +1,18 @@
+ORIG_PN="lv2vocoder"
+
+DESCRIPTION="LV2 vocoder plugin"
+HOMEPAGE="https://gna.org/projects/lv2vocoder"
+SRC_URI="http://download.gna.org/lv2vocoder/${ORIG_PN}-${PV}.tar.bz2"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake
+}
+
+src_install() {
+	cd ${B}
+	export LV2_INSTALL_PATH="${D}${LV2_PATH}"
+	dodir ${LV2_PATH}
+	cyginstall
+}

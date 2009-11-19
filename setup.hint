@@ -1,0 +1,8 @@
+category: Audio
+requires: libgcc1 lv2core
+sdesc: "LV2 vocoder plugin"
+ldesc: "Vocoders are often used to add a robotic effect to vocals in music.
+This vocoder plugin has 2 AUDIO inputs and 1 OUTPUT (of course). The first
+INPUT is the 'Formant' signal which is usually someone's voice. The second
+INPUT is the 'Carrier' signal which is some sort of continuous synth sound.
+The 'Carrier' signal is modulated to the 'Formant'."
